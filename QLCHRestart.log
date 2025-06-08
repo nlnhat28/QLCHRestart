@@ -1,0 +1,17 @@
+﻿[08-06-2025 22:04:53] [Info] [16508] PID: 16508. Start process
+[08-06-2025 22:04:54] [Info] [16508] Created registry key: HKLM\Software\QLCHRestart
+[08-06-2025 22:04:54] [Info] [16508] Saved PID 16508 to registry at HKLM\Software\QLCHRestart
+[08-06-2025 22:04:54] [Info] [16508] W3SVC is already running
+[08-06-2025 22:04:57] [Info] [16508] Scheduled task 'QLCHRestartTask' already exists. Will run at log on
+[08-06-2025 22:04:57] [Info] [16508] Checking events every 60 seconds for events with ID 230 and message containing 'Configuration file is not well-formed XML'...
+[08-06-2025 22:04:57] [Info] [16508] In loop
+[08-06-2025 22:05:57] [Info] [16508] In loop
+[08-06-2025 22:06:58] [Info] [16508] In loop
+[08-06-2025 22:07:58] [Info] [16508] In loop
+[08-06-2025 22:14:35] [Info] [7736] PID: 7736. Start process
+[08-06-2025 22:14:35] [Info] [7736] Saved PID 7736 to registry at HKLM:\Software\QLCHRestart
+[08-06-2025 22:14:35] [Info] [7736] W3SVC is already running
+[08-06-2025 22:14:37] [Info] [7736] Scheduled task 'QLCHRestartTask' already exists. Will run at log on
+[08-06-2025 22:14:37] [Info] [7736] Checking events every 60 seconds for events with ID 230 and message containing 'Configuration file is not well-formed XML'...
+[08-06-2025 22:14:37] [Info] [7736] In loop
+[08-06-2025 22:15:38] [Info] [7736] In loop
