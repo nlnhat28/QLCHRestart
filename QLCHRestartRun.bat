@@ -1,7 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:: Đường dẫn file cfg, bạn có thể sửa nếu cần
+:: Đường dẫn file config
 set "cfgFile=D:\Tool\QLCHRestart\QLCHRestart.config"
 
 :: Kiểm tra file config tồn tại không
