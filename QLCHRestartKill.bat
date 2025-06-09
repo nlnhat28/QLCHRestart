@@ -2,7 +2,7 @@
 setlocal enabledelayedexpansion
 
 :: Đường dẫn file config
-set "cfgFile=D:\Tool\QLCHRestart\QLCHRestart.config"
+set "cfgFile=C:\Tool\QLCHRestart\QLCHRestart.config"
 
 :: Kiểm tra file config tồn tại không
 if not exist "%cfgFile%" (
