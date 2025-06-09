@@ -5,7 +5,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 # Đọc cấu hình từ file
-$configFile = "D:\Tool\QLCHRestart\QLCHRestart.config"
+$configFile = "C:\Tool\QLCH\QLCHRestart\QLCHRestart.config"
 $config = @{}
 try {
     Get-Content $configFile | Where-Object { $_ -match "=" } | ForEach-Object {
