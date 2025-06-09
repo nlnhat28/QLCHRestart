@@ -14,9 +14,9 @@ if not exist "%cfgFile%" (
 :: Đọc từng dòng file config
 for /f "usebackq tokens=1* delims==" %%A in ("%cfgFile%") do (
     set "line=%%A"
-    rem Bỏ qua dòng bắt đầu bằng # hoặc dòng rỗng
+    :: Bỏ qua dòng bắt đầu bằng # hoặc dòng rỗng
     if not "!line:~0,1!"=="#" if not "%%A"=="" (
-        rem Gán biến môi trường
+        :: Gán biến môi trường
         set "%%A=%%B"
     )
 )
