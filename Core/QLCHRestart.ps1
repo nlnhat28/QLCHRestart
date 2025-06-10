@@ -5,7 +5,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 # Đọc cấu hình từ file
-$configFile = "C:\Tool\QLCH\QLCHRestart\Config\QLCHRestart.config"
+$configFile = "C:\Tool\QLCH\QLCHRestart\Config\QLCHRestart.cfg"
 $config = @{}
 try {
     Get-Content $configFile | Where-Object { $_ -match "=" } | ForEach-Object {
@@ -31,23 +31,22 @@ $regPath = $config["REG_PATH"]
 $regFullPath = "$regType`:\$regPath"
 # Đường dẫn đến registry
 $regKeyPID = $config["REG_KEY_PID"]
-
-# PID của script hiện tại
-$thisPID = $PID
 # Thời gian lặp lại kiểm tra log event viewer (giây)
-$loopSeconds = 60
+$loopSeconds = $config["LOOP_SECONDS"]
 # Thời gian lấy log so với thời điểm hiện tại (giây)
 $offsetSeconds = $loopSeconds + 1
 # Thời gian chờ trước khi bắt đầu script (giây)
-$startupDelaySeconds = 10
-
+$startupDelaySeconds = $config["STARTUP_DELAY_SECONDS"]
 # Cấu hình event cần theo dõi
 # Level của event. 1: Warning, 2: Error, 4: Information
-$eventLevel = 2
+$eventLevel = $config["EVENT_LEVEL"]
 # ID của event
-$eventID = 230
+$eventID = $config["EVENT_ID"]
 # Nội dung cần tìm trong message của event
-$eventMessage = "Configuration file is not well-formed XML"
+$eventMessage = $config["EVENT_MESSAGE"]
+
+# PID của script hiện tại
+$thisPID = $PID
 
 Write-Host "Script started"
 

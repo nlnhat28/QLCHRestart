@@ -9,7 +9,7 @@
 ├── Core
 │   └── QLCHRestart.ps1
 ├── Config
-│   └── QLCHRestart.config
+│   └── QLCHRestart.cfg
 ├── Log
 │   └── QLCHRestart.log
 ├── Util
@@ -19,7 +19,7 @@
 * `QLCHRestartRun.bat`: Dùng để chạy file powershell
 * `QLCHRestartKill.bat`: Kill process powershell sau khi chạy
 * `QLCHRestart.ps1`: File powershell chính, xử lý các nghiệp vụ
-* `QLCHRestart.config`: Chứa config
+* `QLCHRestart.cfg`: Chứa config
 * `QLCHRestart.log`: Chứa log
 * `QLCHCreateFakeEvent.bat`: Giả lập tạo log vào Event Viewer
 
