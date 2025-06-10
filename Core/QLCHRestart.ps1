@@ -34,7 +34,7 @@ $regKeyPID = $config["REG_KEY_PID"]
 # Thời gian lặp lại kiểm tra log event viewer (giây)
 $loopSeconds = $config["LOOP_SECONDS"]
 # Thời gian lấy log so với thời điểm hiện tại (giây)
-$offsetSeconds = $loopSeconds + 1
+$offsetSeconds = $config["OFFSET_SECONDS"]
 # Thời gian chờ trước khi bắt đầu script (giây)
 $startupDelaySeconds = $config["STARTUP_DELAY_SECONDS"]
 # Cấu hình event cần theo dõi
