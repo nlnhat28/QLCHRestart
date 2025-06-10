@@ -5,7 +5,7 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
 }
 
 # Đọc cấu hình từ file
-$configFile = "C:\Tool\QLCH\QLCHRestart\QLCHRestart.config"
+$configFile = "C:\Tool\QLCH\QLCHRestart\Config\QLCHRestart.config"
 $config = @{}
 try {
     Get-Content $configFile | Where-Object { $_ -match "=" } | ForEach-Object {
@@ -19,7 +19,7 @@ try {
     exit
 }
 # Thư mục chứa script và log
-$rootFolder = $config["ROOT_DIR"]
+$rootDir = $config["ROOT_DIR"]
 # Đường dẫn đến file script
 $scriptPath = $config["SCRIPT_PATH"]
 # Đường dẫn đến file log
@@ -56,12 +56,12 @@ Start-Sleep -Seconds $startupDelaySeconds
 
 # Tạo thư mục chứa log nếu chưa có
 try {
-    if (-not (Test-Path $rootFolder)) {
-        New-Item -ItemType Directory -Path $rootFolder -Force | Out-Null
-        Write-Host "Created log folder: $rootFolder"
+    if (-not (Test-Path $rootDir)) {
+        New-Item -ItemType Directory -Path $rootDir -Force | Out-Null
+        Write-Host "Created log folder: $rootDir"
     }
 } catch {
-    Write-Host "Cannot create log folder $rootFolder. $_" -ForegroundColor Red
+    Write-Host "Cannot create log folder $rootDir. $_" -ForegroundColor Red
 }
 
 # Hàm ghi log
