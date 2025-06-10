@@ -16,7 +16,7 @@
 │   └── QLCHCreateFakeEvent.bat
 └── README.md </pre>
 
-* `QLCHRestartRun.bat`: Dùng để chạy file powershell trên
+* `QLCHRestartRun.bat`: Dùng để chạy file powershell
 * `QLCHRestartKill.bat`: Kill process powershell sau khi chạy
 * `QLCHRestart.ps1`: File powershell chính, xử lý các nghiệp vụ
 * `QLCHRestart.config`: Chứa config
