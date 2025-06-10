@@ -104,7 +104,7 @@ function Start-IISServer {
     try {
         $iisStatus = Get-Service W3SVC -ErrorAction Stop
         if ($iisStatus.Status -ne 'Running') {
-            Write-Log "W3SVC not running. Attempting to start..."
+            Write-Log "W3SVC not running. Attempting to start"
             Start-Service W3SVC -ErrorAction Stop
             Start-Sleep -Seconds 3
         } else {
@@ -172,7 +172,7 @@ function Create-ScheduledTask {
 # Hàm kiểm tra log event viewer để restart máy
 function DoWork-CheckLog {
     try {
-        Write-Log "Checking events every $loopSeconds seconds for events with ID $eventID and message containing '$eventMessage'..."
+        Write-Log "Checking events every $loopSeconds seconds for events with ID $eventID and message containing '$eventMessage'"
         while ($true) {
             try {
                 Write-Log "In loop"
