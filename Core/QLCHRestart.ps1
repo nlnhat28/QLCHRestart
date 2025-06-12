@@ -80,6 +80,7 @@ function Write-Log {
     }
 }
 
+# Bỏ
 # Lưu PID vào registry
 function Save-PID {
     try {
@@ -99,6 +100,7 @@ function Save-PID {
     }
 }
 
+# Bỏ
 # Hàm kiểm tra và khởi động lại IIS sau khi restart
 function Start-IISServer {
     try {
@@ -133,6 +135,7 @@ function Start-IISServer {
     }
 }
 
+# Bỏ
 # Hàm tạo task tự động chạy script này sau khi khởi động
 function Create-ScheduledTask {
     try {
